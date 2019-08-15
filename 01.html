@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+// var a = 10;
+// function foo() {
+//     console.log(a); // ??
+//     let a = 20;
+// }
+// foo();
+
+// 误解作用域:认为存在块级作用域
+// var array = [];
+// for (var i = 0; i < 3; i++) {
+//   // 三个箭头函数体中的每个`'i'`都指向相同的绑定，
+//   // 这就是为什么它们在循环结束时返回相同的值'3'。
+//   array.push(() => i);
+// }
+// // console.log('i :', i);
+// // console.log('array :', array);
+// var newArray = array.map(el => el());
+// console.log(newArray); // [3, 3, 3]
+
+
+// for 循环
+// const arr = [100, 200, 400];
+// const arr2 = [];
+// for(let i = 0; i < arr.length; i ++) {
+//    console.log('arr[i] * 2 :', arr[i] * 2);
+//    const newItem = arr[i] * 2;
+//    arr2.push(newItem);
+// }
+// console.log('arr2 :', arr2);
+
+// 数组 map方法
+// const arr = [10, 20, 99];
+// const arr2 = arr.map(item => {
+//   return item * 2;
+// });
+
+// console.log('arr2 :', arr2);
+
+
+
+
+// for 循环
+const arr = [100, 200, 400];
+const arr2 = [];
+for(let i =0;i<arr.length;i++){
+  const newItem = arr[i]*2;
+  arr2.push(newItem);
+}
+console.log('arr2:',arr2);
+
+const test = [
+    {num: 2},
+    {num: 222},
+    {num: 2345}
+];
+const test2 = [];
+for(let i = 0;i<test.length;i++){
+  const newItem = {
+    num:test[i].num*2
+  }
+  test2.push(newItem);
+}
+ console.log('test2 :', test2);
+const test3 = test.map(item=>{
+  return {num:item.num *2};
+})
+console.log('test3 :', test3);
+
+
+const users  = [
+  {name: 'shaohai', money: 20000},
+  {name:'guirong', money: 800000000000}
+];
+const users2 =[];
+for (let i = 0; i< users.length;i++){
+
+  const newItem = {
+     ...users[i],
+    money:users[i].money*2
+}
+users2.push(newItem);
+
+}
+console.log('users2 :', users2);
+
+const users0 = [
+  {name: 'shaohai', money: 20000},
+  {name:'guirong', money: 800}
+];
+const users8 =[];
+for (let i = 0;i<users0.length;i++){
+  const newItem = {
+    ...users0[i],
+    money:users0[i].money*2
+  }
+  users8.push(newItem);
+}
+console.log('users8 :', users8);
+
+
+const  users4 = users.map(item=>{
+  return {
+    ...item,
+    money:item.money*2
+  };
+})
+console.log('users4 :', users4);
+
+
+const users9 = users.map(item=>{
+  return{
+    ...item,
+    money:item.money*2
+  };
+})
+console.log('users9 :', users9);
+// map方法将调用数组的每个元素传递给指定的函数,并返回一个数组,它包含该函数的返回值。
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Math对象有个max() 方法: 可以返回传入数字中的最大者:
+    // var max = Math.max(1,4,8,15,0)
+    // console.log('max :', max);
+
+
+    // 使用 call 方法
+    // const  max1 = Math.max1.call(Math,1,4,8,15,0)
+
+    // console.log('max1 :', max1);
+
+    // var arr = [1, 8, 3, 15, 4, 5]; //声明数组表达式
+    // // var max = Math.max.call(Math, ...arr); // ES6解构语法  call()
+    // var max = Math.max.apply(Math,arr);// apply()
+    // console.log(max); // 打印15
+
+//     function hello(someone) {
+//     console.log(this + "你好啊 " + someone);//[object Window]你好啊 掘金果酱淋
+// } // 函数声明
+
+// hello("掘金果酱淋");
+
+// function hello(someone) {
+//     'use strict';
+//     console.log(this + "你好啊 " + someone);
+// } // 函数声明
+
+// hello.("掘金果酱淋"); // 函数调用，打印出 //undefined你好啊 掘金果酱淋
+// hello.call(undefined, "掘金果酱淋"); 
+
+
+// function a(){
+//     var user = "追梦子";
+//     console.log(user); //追梦子
+//     console.log('this.user :', this.user);//undefined
+//     console.log(this); //Window
+// }
+// a();// 相当于window.a()
+
+
+for(var i = 0; i < 10; i++) {
+  setTimeout(function(){
+    console.log(i);  // 10个 10
+  }, 100)
+}
+
+
+
+
+
+
+    </script>
+</body>
+</html>
