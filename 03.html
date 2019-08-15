@@ -8,12 +8,19 @@
 </head>
 <body>
   <script>
-var a = 10;
+var fn = (
+  function test1(){
+    return 1;
+  },
+  function test2(){
+    return '2';
+  }
+)();
+var num =  (1,2);
 
-if(function b(){}){
-  a += typeof(b);
-}
-console.log(a);
+console.log(num); // 2
+
+console.log(typeof(fn));
   </script>
 </body>
 </html

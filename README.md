@@ -81,7 +81,7 @@ var num =  (1,2);
 
 console.log(num); // 2
 
-console.log(typeof(fn));
+console.log(typeof(fn)); // string
 
 // 逗号分隔符，返回的永远是最后一个！
 ```
@@ -92,5 +92,28 @@ var a = 10;
 if(function b(){}){
   a += typeof(b);
 }
-console.log(a);
+console.log(a);// '10undefined'
 ```
+
++ 3
+```js
+
+```
+
++ 4
+```js
+
+```
++ 5
+```js
+
+```
++ 6
+```js
+
+```
++ 7
+```js
+
+```
+
